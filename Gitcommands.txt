@@ -1,0 +1,42 @@
+create a repo in UI of github
+in our local
+git init ---- initializes a empty repo in your local, whenever you create ls -a , you can see a (.git) folder this will be responsible for all of your code everything will be present in .git folder
+.git/hooks/pre-commithooks  --- it is responsibe for before action of git commit pre-commithooks will work and ensure no passwords or secrets pushed to github
+git status --- to see what is happening in this repository
+git add calculator.sh --- adding file to git
+git diff --- to see the code changes in a file
+git commit -m " My first commit" ---- commits the code changes
+git log --- to show you list of commits who made this commit and author and with commit message
+git push --- from local to push changes to git hub
+Git workflow
+-----------
+git add && git commit -m "commitmessage" && git Push
+Mostly developers create repo through UI and clone the repository
+git clone https://github.com/argocdproj/argo-cd.git
+git remote -v --- to know the remote reference (which repo)
+git remote add "https://github.com/Iam-veramalla/testrepo" --- to create repo using CLI
+there are 3 options to downlond/clone your repo 
+https--- where you need to provide password
+ssh--- you need public key
+ssh-keygen -t rsa
+you find your key in .ssh folder (users/averram/.ssh/id_rsa)
+id_rsa--- private key
+id_rsa.pub --- public key
+copy the public key and paste it in github settings->ssh&gpg keys->new ssh key
+Diff btw clone and fork
+Clone is downloading the repo into your local
+Fork means entire copy/replica of repository by your name space
+git checkout -b feature --- to create a branch
+git branch -- to see which branch you are in
+git checkout main -- to switch to main branch
+using branching strategy you can isolate/separate development activities
+git log division ---- to see division branch logs
+git cherry-pick 8368593293935582923gf972j98 --- cherry-pick is used to merge specific commit to another branch
+git log --oneline --- shows logs in oneline
+git log mergeexample --oneline
+git merge mergeexample --- to merge the changes from Mergeexample branch to main branch
+merge and rebase both are used to merge the changes from one branch to another only diff is rebase will give you commit history in a linear manner
+if you want the previous  version of commit code then
+git reset --hard 2546657876hjeta46576642sd4
+
+
