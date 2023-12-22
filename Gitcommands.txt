@@ -39,4 +39,79 @@ merge and rebase both are used to merge the changes from one branch to another o
 if you want the previous  version of commit code then
 git reset --hard 2546657876hjeta46576642sd4
 
+Interview questions
+-------------------
+Is git a centralized or Distributerd version control system? difference btw them
+Git is a distributed version control system, the main diff is centralized version control follows client and server methodology where all the versions of the code only available in server
+and also lets sya two developers wants to share their code they need to push changes to server through server data sharing is done in centralized where as distributed 
+all the versions/replicas/copy of the code will have with all the developers
+
+what are the git commands that use to commit changes to your remote repository?
+Git add && git commit -m "" && git push
+
+what are the differences btw git fetch and git pull?
+Git fetch is like it will show you what are the changes that are mode to remote repository (lets say u already cloned the repo tour local and somedays u want to see
+what are the change that remote repo having then we use git fetch) git fetch will show you the remote repo changes to your local
+git pull will show the changes and merge it to your local
+git pull = git fetch + git merge
+
+what is diff btw git merge and git rebase?
+both will do same if you want to bring the code changes from one branch to another branch. but if you bothered about commit history rebase will give you a linear commit history
+
+what is .git and .gitignore?
+.git is everything in git, .git folder contains all the information, all the project details,file information related to ur commit, ur remote repository address
+like what is your remote repo for ur local repo. everything is present in .git, all the things are stored as objects in git, if you delete .git then all the info
+related to the repo will be lost
+.gitignore if you want to ignore anything from .git. you simply put that file info in the .gitignore folder, lets say if you dont want to push a specific file 
+from local repo to remote repo so you can simply add the file reference in the .gitignore folder
+
+what are pre-commit hooks and what are post-commit hooks?
+Hook is something you want to perform an action before or after something is called a hook
+pre-commit hooks are the actions that are taken by git before you do the commit
+post-commit hooks are the actions that are taken by git after you do the commit
+pre-commit hooks examples --- prevents accidentally pushing passwords security tokens (configure pre-coomit hook) before every commit just execute this script.
+post-commit hooks examples --- if u want to execute any action after your commit then it is called post commit hook
+
+what is webhooks?
+it is part of github, lets say if you want trigger a pipeline or run a python script you want github to perform an action after your commit/issues/pull requests we can configure webhooks.
+
+How to pull and push changes to git?
+using git pull && git push
+
+what is git stash and its usecases?
+git stash is something if you dont want to commit/push the changes right now it will give you a temporary saves changes in your working directory.
+git stash list -- lists all the stashed changes.
+git stash apply --- This command is used to apply the most recent stash (if <stash> is not specified) or a specific stash onto your current working directory. It leaves the stash in the stash list.
+git stash pop ---  This command applies the most recent stash (if <stash> is not specified) or a specific stash onto your current working directory and removes it from the stash list.
+git stash drop --- This command is used to delete a specific stash from the stash list. If no <stash> is specified, it will delete the most recent stash. This command doesn't affect the applied changes; it only removes the specified stash.
+
+what is diff btw git clone and git fork
+git clone is downloading the repo onto your local and git fork is copying/replica of the entire remote repo into your namespace (getting whole thing into ur namespace)
+
+what is git-cherrypick?
+if u want a merge a specific commit to one branch to another branch then you use git-cherrypick
+
+How to amend a commit in git?
+amending is nothing but u want to add something to the existing commit, lets assume you have done something wrong with your commit and pushed your commit 
+if u want to fix the broken commit git commit --amend it will fix your broken change.
+
+How do you resolve a merge conflict in git?
+it can be done by collabration sit with developers and see the changes.
+git merge/rebase --abort --- to completely remove the changes
+git merge/rebase --restore --- ( if u know the changes are fixed and sat with developer u understood what has to be changed, and simply add the changes back and do
+git merge/rebase --restore
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
